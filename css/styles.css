@@ -19,13 +19,13 @@ html {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 h2,
 p,
 span {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -189,15 +189,15 @@ hr {
 }
 
 h2.card-text {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 p.description-title {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 p.description {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -232,15 +232,15 @@ p.description {
   }
 
   h2.card-text {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   p.description-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   p.description {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     overflow: hidden;
   }
 
