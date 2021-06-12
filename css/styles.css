@@ -169,7 +169,8 @@ hr {
 
 .card-image {
   width: 95%;
-  height: auto;
+  height: 120px;
+  object-fit: cover;
   margin: 0.3rem;
   border: 1px solid rgba(40, 28, 45, 0.5);
 }
@@ -205,6 +206,10 @@ p.description {
     max-width: 90%;
   }
 
+  .card-image {
+    height: 150px;
+  }
+
   .grid {
     gap: 2rem;
   }
@@ -217,6 +222,10 @@ p.description {
 
   .header {
     margin: 3rem auto 0.5rem;
+  }
+
+  .card-image {
+    height: 180px;
   }
 
   .catalog-list {
