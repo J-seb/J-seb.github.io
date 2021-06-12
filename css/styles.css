@@ -404,6 +404,7 @@ input[type="file"] {
 .container-login {
   height: 100vh;
 }
+
 .container-login-form {
   background-color: var(--main-color);
   height: 100%;
@@ -440,6 +441,7 @@ input[type="file"] {
   border-bottom: 1px solid white;
   padding: 0.5rem;
   margin: 2rem auto;
+  font-size: 1.2rem;
 }
 
 .login-input::placeholder {
@@ -447,6 +449,7 @@ input[type="file"] {
 }
 
 .login-button {
+  font-size: 1.2rem;
   color: var(--main-color);
   background-color: var(--white-color);
   border: 1px solid var(--main-color);
@@ -458,6 +461,7 @@ input[type="file"] {
 }
 
 .login-link {
+  font-size: 1.2rem;
   color: white;
   text-decoration: none;
 }
