@@ -32,14 +32,15 @@
                     Clothes Store
                 </h1>
             </a>
-            <a href="/" class="nav-link">
+            <span class="nav-link">
                 <svg class="nav-icon">
                     <use xlink:href="./icons/sprite.svg#user"></use>
                 </svg>
-                <span class="nav-text">
-                    Admin
+                <span class="nav-text user-tag">
+
                 </span>
-            </a>
+                <a class="nav-link nav-text logout-tag">Logout</a>
+            </span>
         </nav>
     </header>
 
@@ -70,7 +71,7 @@
             <span class="close-button">&times;</span>
             <form action="myAction" class="product-form">
                 <input type="text" placeholder="Product name" class="text-input product-name" required autofocus>
-                <input type="text" placeholder="Price" class="text-input product-price" required>
+                <input type="number" placeholder="Price" class="text-input product-price" required>
 
                 <textarea name="product-desc" cols="30" rows="10" placeholder="Product description"
                     class="text-input product-description" required></textarea>
@@ -93,8 +94,8 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
 

@@ -1,7 +1,10 @@
 // Clase que almacenará los listeners de los botones, es una de las clases principales
 export class Listeners {
   // Ingreso el modal, el objeto de firebase y el formulario como parámetros de entrada
-  constructor(modal, fb, form) {
+  constructor(modal, fb, form, fbAuth) {
+    // Apunto al logout del nav
+    this.logoutButton = document.querySelector(".logout-tag");
+
     // Apunto a los botones de adición de producto y cerrar modal
     this.addButton = document.querySelector(".btn-add");
     this.closeButton = document.querySelector(".close-button");
@@ -84,6 +87,18 @@ export class Listeners {
             modal.isOpen = true;
           }
         });
+      });
+    };
+
+    // Agregamos listener al botón logout
+    this.enableLogoutButton = function () {
+      this.logoutButton.addEventListener("click", () => {
+        try {
+          fbAuth.fbLogOut();
+          window.location.href = "./views/login.html";
+        } catch (error) {
+          console.log(error.message);
+        }
       });
     };
   }

@@ -24,24 +24,23 @@
         <div class="container-login-form">
             <div>
                 <svg class="login-icon">
-                    <use xlink:href="./icons/sprite.svg#shopping-bag"></use>
+                    <use xlink:href="../icons/sprite.svg#shopping-bag"></use>
                 </svg>
                 <h1 class="login-title">
                     Clothes Store
                 </h1>
                 <p class="login-text">Sign Up</p>
             </div>
-            <form action="">
-                <input type="text" placeholder="Username" class="login-input" autofocus>
-                <input type="password" placeholder="Password" class="login-input">
-                <input type="email" placeholder="Email" class="login-input">
+            <form>
+                <input type="email" placeholder="Email" class="login-input input-email" required>
+                <input type="password" placeholder="Password" class="login-input input-password" required>
                 <div class="check-field">
-                    <input type="checkbox" name="" id="check-tems" checked>
+                    <input type="checkbox" name="" id="check-tems" class="input-check" checked required>
                     <label for="check-terms" class="terms-label">I accept terms and conditions</label>
                 </div>
-                <button type="submit" class="login-button">Send</button>
+                <button type="submit" class="login-button input-button">Send</button>
             </form>
-            <a href="/login.html" class="login-link">Do you have an account?</a>
+            <a href="./login.html" class="login-link">Do you have an account?</a>
         </div>
         <div class="login-img-md">
         </div>
@@ -54,7 +53,7 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
-    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
@@ -76,7 +75,7 @@
         firebase.analytics();
     </script>
 
-    <script src="../js/index.js"></script>
+    <script type="module" src="../js/auth.js"></script>
 </body>
 
 </html>
