@@ -15,21 +15,29 @@ export class FormAuth {
         const email = this.inputEmail.value;
         const password = this.inputPassword.value;
 
+        // El try me ayuda a que google me haga validación y si ocurre algún error, yo puedo mostrar como alert ese detalle del por qué no deja ingresar/registrar
         try {
+          // Si la página es signup vamos a intentar a hacer una creación de usuario
           if (window.location.href.includes("signup")) {
+            // Si el check no está activo, no deja registrar
             if (this.inputCheck.checked) {
+              // Si el check está activo, deja registrar e inmediatamente inicia sesión
               await fb.fbAuthCreateUser(email, password);
               alert("User was registered successfully!!!");
               window.location.href = "/";
             } else {
+              // Si el check no está activo no crea usuario e indica que acepte términos y condiciones
               alert("Please accept terms and conditions");
             }
           } else {
+            // Si la página no es signup por descarte sabemos que es login, por tanto inicializamos el login
             await fb.fbAuthSignIn(email, password);
             alert("Welcome");
             window.location.href = "/";
           }
         } catch (error) {
+          // En caso de que en alguno de las opciones anteriores se muestre error, se imprime las causas del problema
+          // el cual suele ser problemas de validación del formulario desde el lado del servidor, o usuarios ya existentes
           alert(error.message);
         }
       });

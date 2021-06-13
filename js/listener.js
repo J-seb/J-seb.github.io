@@ -93,6 +93,7 @@ export class Listeners {
     // Agregamos listener al botón logout
     this.enableLogoutButton = function () {
       this.logoutButton.addEventListener("click", () => {
+        // Intentamos hacer logout en firebase, si es exitoso nos redirige al login, sino mostramos el error.
         try {
           fbAuth.fbLogOut();
           window.location.href = "./views/login.html";

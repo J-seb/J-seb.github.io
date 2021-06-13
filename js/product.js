@@ -4,6 +4,7 @@ export class Product {
     this.blockOfProducts = document.querySelector(".catalog-block");
 
     // Devuelve un template string personalizado con los datos del objeto que se ingresen
+    // en este caso son unos article correspondiente a cada producto
     this.renderProduct = function (obj) {
       return `<article class="card">
           <div class="card-header">
